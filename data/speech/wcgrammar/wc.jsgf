@@ -1,0 +1,31 @@
+#JSGF V1.0;
+
+grammar chess;
+<file> = ( <a> | <b> | <c> | <d> | <e> | <f> | <g> | <h> );
+
+<a> = ( alpha );
+<b>	= ( bravo );
+<c> = ( crown );
+<d> = ( delta );
+<e> = ( echo );
+<f> = ( foxtrot );
+<g> = ( golf);
+<h> = ( hammer );
+
+<rank> = ( <one> | <two> | <three> | <four> | <five> | <six> | <seven> | <eight> );
+
+<one> = (1);
+<two> = (2);
+<three> =(3);
+<four> = (4);
+<five> = (5);
+<six> = (6);
+<seven> = (7);
+<eight> = (8);
+
+<cell> = <file> <rank>;
+
+<piece> = ( king | queen | knight | rook | bishop | pawn );
+
+public <move> = ([[please ]move ]<piece> [from <cell> ]to <cell>) | ( ( king | queen ) side castle );
+
